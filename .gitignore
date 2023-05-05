@@ -1,0 +1,5 @@
+# dependencies
+/node_modules
+/output
+/auto-generated
+package-lock.json

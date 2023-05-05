@@ -1,0 +1,29 @@
+{
+  "name": "codeceptjsproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "env-cmd -f env/grocery-store/.env npx codeceptjs run --grep @NXT --config config/grocery-store/api/codecept.conf.js --steps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.18.1",
+    "assert": "^2.0.0",
+    "chai": "^4.3.7",
+    "codeceptjs": "^3.4.1",
+    "codeceptjs-assert": "^0.0.5",
+    "codeceptjs-tesults": "^1.1.0",
+    "env-cmd": "^10.1.0",
+    "faker": "^5.5.3",
+    "jsonpath": "^1.1.1",
+    "playwright": "^1.33.0",
+    "puppeteer": "^19.11.1",
+    "webdriverio": "^7.31.1"
+  },
+  "devDependencies": {
+    "@testomatio/reporter": "^0.7.6"
+  }
+}
