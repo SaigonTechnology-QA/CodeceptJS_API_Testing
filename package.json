@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "api": "env-cmd -f env/grocery-store/.env npx codeceptjs run --grep @NXT --config config/grocery-store/api/codecept.conf.js --steps"
+    "check_api": "env-cmd -f env/grocery-store/.env npx codeceptjs run --grep @NXT --config config/grocery-store/api/codecept.conf.js --steps",
+    "report": "allure generate auto-generated/allure-results --clean -o auto-generated/allure-report || true"
   },
   "keywords": [],
   "author": "",
