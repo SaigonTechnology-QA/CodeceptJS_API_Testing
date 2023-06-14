@@ -50,7 +50,7 @@ exports.config = {
       target: process.env.TargetToken,
       },
     testomatio: {
-      enabled: false,
+      enabled: true,
       require: '@testomatio/reporter/lib/adapter/codecept',
       apiKey: process.env.TESTOMATIO,
     }

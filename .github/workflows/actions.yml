@@ -1,0 +1,25 @@
+name: API testing job
+
+on:
+  push:
+    branches: [master]
+#  schedule:
+#    - cron: '0 0 * * 1'   # At 00:00 on Monday
+#  pull_request:
+#    branches: [ master ]
+
+jobs:
+  run-api-test:
+    runs-on: ubuntu-latest
+    container:
+      image: cimg/node:18.16.0-browsers
+      options: --user root
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v3
+
+      - name: Execute the test
+        run: |
+          cd $GITHUB_WORKSPACE
+          sudo npm install
+          sudo npm run check_api
